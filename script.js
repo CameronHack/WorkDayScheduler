@@ -3,6 +3,10 @@
 // in the html.
 
 let row = document.querySelectorAll('.row')
+let textArea = document.querySelectorAll("textArea")
+let iEl = document.querySelectorAll('i')
+
+
 
 
 
@@ -14,7 +18,17 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
+  
+  
+  addEventListener("click", function(e){
+    
+    if(e.target.matches('i')) {
 
+      localStorage.setItem(e.target.parentElement.parentElement.id, e.target.parentElement.previousElementSibling.value)
+
+    }
+
+  })
 
 
   // TODO: Add code to apply the past, present, or future class to each time
@@ -25,26 +39,22 @@ $(function () {
   //
 
 
-  for (let i = 0; i < row.length; i++) {
-
-    if (parseInt(row[i].dataset.time) > dayjs().hour()) {
-      row[i].setAttribute("class", "row time-block future")
-    } else if (parseInt(row[i].dataset.time) < dayjs().hour()) {
-      row[i].setAttribute("class", "row time-block past")
-    } else {
-      row[i].setAttribute("class", "row time-block present")
-    }
-
-  }
- 
 
 
+
+  
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
 
 
+  
+  for (let i = 0; i < row.length; i++) {
+    textArea[i].textContent = localStorage.getItem[i]
+    // console.log(textArea[i])
+    
+  }
 
   // TODO: Add code to display the current date in the header of the page.
 
