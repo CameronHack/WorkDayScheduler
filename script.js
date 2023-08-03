@@ -38,11 +38,18 @@ $(function () {
   // current hour in 24-hour time?
   //
 
+  for (let i = 0; i < row.length; i++) {
 
+    if (parseInt(row[i].dataset.time) > dayjs().hour()) {
+      row[i].setAttribute("class", "row time-block future")
+    } else if (parseInt(row[i].dataset.time) < dayjs().hour()) {
+      row[i].setAttribute("class", "row time-block past")
+    } else {
+      row[i].setAttribute("class", "row time-block present")
+    }
 
+  }
 
-
-  
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
