@@ -10,3 +10,4 @@ Work Day Scheduler allows users to simply plan their workday by typing tasks int
 - Time blocks are color coded for past, present, and future
 - Save tasks to local storage
 
+![workdayscheduler](https://github.com/CameronHack/WorkDayScheduler/assets/139071966/13bb6ed7-b55b-44f9-9eeb-26b5296bd5c6)
