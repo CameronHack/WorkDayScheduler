@@ -4,7 +4,6 @@
 
 let row = document.querySelectorAll('.row')
 let textArea = document.querySelectorAll("textArea")
-let iEl = document.querySelectorAll('i')
 
 
 
@@ -55,13 +54,15 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
 
-
-  
-  for (let i = 0; i < row.length; i++) {
-    textArea[i].textContent = localStorage.getItem[i]
-    // console.log(textArea[i])
-    
-  }
+  textArea[0].textContent = localStorage.getItem("hour-9")
+  textArea[1].textContent = localStorage.getItem("hour-10")
+  textArea[2].textContent = localStorage.getItem("hour-11")
+  textArea[3].textContent = localStorage.getItem("hour-12")
+  textArea[4].textContent = localStorage.getItem("hour-13")
+  textArea[5].textContent = localStorage.getItem("hour-14")
+  textArea[6].textContent = localStorage.getItem("hour-15")
+  textArea[7].textContent = localStorage.getItem("hour-16")
+  textArea[8].textContent = localStorage.getItem("hour-17")
 
   // TODO: Add code to display the current date in the header of the page.
 
